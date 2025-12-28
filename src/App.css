@@ -1,0 +1,58 @@
+.app {
+  min-height: 100vh;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-link {
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* 페이지 컨텐츠에 네비게이션 높이만큼 여백 추가 */
+.roulette-container,
+.manage-container {
+  padding-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 0.8rem 1rem;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
